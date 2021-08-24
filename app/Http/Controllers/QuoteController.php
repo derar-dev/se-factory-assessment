@@ -13,6 +13,16 @@ class QuoteController extends Controller
         $this->middleware('jwt.verify');
     }
 
+    public function index()
+    {
+        $quotes = auth()->user()->quotes;
+        $response = [
+            "success" => true,
+            "quotes"=>$quotes
+        ];
+        return response()->json($response, 200);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
