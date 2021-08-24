@@ -41,6 +41,17 @@ open another terminal window in the project root and run
 ## Notes:
 
 - you can use any `email` from the `quotes list` with `password` as password to login.
-- after loged in, a `token` will be generated, you can copy it from the 
-- there is a file called `SE-Factory Assessment.postman_collection.json` which can be imported into `postman`, then you can test `api-endpoints` like (adding,editing,removing) quotes.
-- i've kept `.env` file to run the project easily
+- after loged in, a `token` will be generated.
+- there is a file called `SE-Factory Assessment.postman_collection.json` which can be imported into `postman`, then you can test `api-endpoints` like (adding,editing,removing) quotes and basic auth operations like (login,logout,profile).
+- you can copy your `token` by clicking on copy token button.
+
+![](/images/copy-token.png)
+
+- after copying the `token` you can use it in postman like this:
+    - navigate to the request you want to perform
+    - navigate to `Authorization` tab
+    - from `type` dropdown choose `Bearer Token`
+    - paste the `token` in the field
+
+    - ![](/images/postman.png)
+- - i've kept `.env` file to run the project easily.
